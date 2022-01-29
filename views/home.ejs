@@ -1,0 +1,28 @@
+
+<section class="home">
+    <div class="row-sambutan">
+        <div class="col-sambutan">
+            <h3>Selamat Datang di Website IT Riza Group Ternama dan Tersukses</h3>
+        </div>
+        
+    </div>
+    <div class="row-greeting-profile">
+        <div class="container-greeting-profile">
+            <div class="row-img">
+                <img src="<%= user.picture %>" alt="">
+            </div>
+            <h4><%= user.nama %></h4>
+            <div class="row-info">
+                <p>Dengan sistem login menggunakan Oauth google atau facebook maka ada beberapa informasi akun google Anda yang kami dapatkan diantaranya adalah nama, picture profile dan email. Berikut ini adalah email Anda :</p>
+                <h4><%= user.email %></h4>
+            </div>
+    
+            <a href="/auth/logout">
+                <button class="btn-logout"><p class="text-a">Keluar</p></button>
+            </a>
+            
+        </div>
+
+    </div>
+</section>
+

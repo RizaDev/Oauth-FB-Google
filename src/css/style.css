@@ -1,0 +1,425 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* background-color: #fefefe; */
+}
+
+.container {
+  border: 1px solid;
+  width: 100%;
+  /* height: 500px; */
+  background-color: #fefefe;
+}
+/* NAV CSS */
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: start;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 3px solid #fa883a;
+  background-color: #fefefe;
+  /* margin-bottom: 200px; */
+}
+
+.menu-brand {
+  width: 20%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+}
+
+.menu-brand img {
+  width: 130px;
+  height: 30px;
+}
+
+.menu-utama {
+  /* border: 1px solid; */
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-utama a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 100;
+  color: #827b75;
+}
+
+.menu-ld {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid; */
+}
+
+.pembungkus-btn-masuk {
+  width: 65%;
+  /* border: 1px solid #129952; */
+  display: flex;
+  justify-content: end;
+}
+
+.pembungkus-btn-daftar {
+  width: 50%;
+  /* border: 1px solid; */
+  display: flex;
+}
+.btn-masuk {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+  margin-left: 10px;
+  color: #8f8079;
+  background-color: #fefefe;
+  border: 1px solid #129952;
+  font-size: 17px;
+}
+
+.btn-daftar {
+  margin-left: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+  font-size: 17px;
+  background-color: #129952;
+  color: #fefefe;
+}
+/* Akhir Nav CSS */
+
+/* Login CSS */
+section.login {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.row-title-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.row-title-brand img {
+  width: 200px;
+  height: 50px;
+}
+
+.row-username-text {
+  display: flex;
+  justify-content: start;
+  width: 400px;
+  margin-bottom: 5px;
+}
+.row-username-text p {
+  color: #8f8079;
+  font-size: 20px;
+}
+.row-input {
+  display: flex;
+  width: 400px;
+  margin-bottom: 5px;
+}
+.field-user {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.row-password {
+  display: flex;
+  width: 400px;
+  margin-bottom: 5px;
+}
+.col-field-pass {
+  width: 80%;
+  display: flex;
+}
+.field-pass {
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.col-eye {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pembungkus-eye {
+  border: 1px solid #129952;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+.col-eye img {
+  width: 40px;
+}
+
+.row-lupa-pass {
+  width: 400px;
+  text-align: right;
+  margin: 9px 0;
+}
+
+.row-lupa-pass p {
+  color: #50aa6e;
+}
+
+.row-btn-masuk {
+  width: 400px;
+}
+
+.btn-login {
+  width: 100%;
+  height: 60px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fefefe;
+  background-color: #129952;
+  border: 1px solid #129952;
+  border-radius: 7px;
+}
+
+.row-pil {
+  width: 400px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.row-pil p {
+  font-size: 17px;
+  color: #19192f;
+}
+
+.row-pil-login {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.col-google {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.col-fb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-github {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.col-google img,
+.col-fb img,
+.col-github img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.row-daftar p {
+  font-weight: 700;
+}
+.row-daftar span {
+  font-weight: 700;
+  color: #129952;
+}
+
+/* Akhir Login CSS */
+
+/* Home CSS */
+section.home {
+  width: 100%;
+  /* height: 400px; */
+  margin-bottom: 20px;
+}
+
+.row-sambutan {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.col-sambutan {
+  text-align: center;
+  width: 350px;
+}
+.row-greeting-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-greeting-profile {
+  width: 300px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+.container-greeting-profile h4 {
+  text-align: center;
+}
+
+.row-img img {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.row-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-logout {
+  width: 100%;
+  height: 50px;
+  background-color: #129952;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #129952;
+}
+.text-a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+/* Footer CSS */
+footer {
+  background-color: #1e2228;
+  height: 430px;
+}
+
+.row-footer-menu {
+  display: flex;
+  margin-bottom: 30px;
+  padding-top: 90px;
+}
+
+.col-footer-1 {
+  width: 15%;
+}
+.col-footer-1 img {
+  width: 130px;
+}
+.row-bg-dari {
+  text-align: right;
+  width: 100%;
+}
+.row-jkt {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.col-footer-2 {
+  width: 30%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.col-footer-2 img {
+  width: 200px;
+  margin-left: 20px;
+}
+.col-footer-3 {
+  width: 15%;
+}
+.col-footer-4 {
+  width: 20%;
+}
+.col-footer-5 {
+  width: 20%;
+}
+
+.pembungkus-ft-icon {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.pembungkus-ft-icon img {
+  width: 20px;
+}
+.col-footer-1 h2 {
+  color: #bbc0c4;
+  font-size: 19px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  text-align: right;
+  margin-right: 30px;
+}
+.col-footer-3 h2,
+.col-footer-4 h2,
+.col-footer-5 h2 {
+  color: #bbc0c4;
+  font-size: 19px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.col-footer-3 p,
+.col-footer-4 p,
+.col-footer-5 p {
+  color: #7a8887;
+  line-height: 30px;
+}
+
+.row-pt p {
+  color: #929b97;
+  text-align: center;
+  line-height: 25px;
+}
+
+.pembungkus-madein-ID {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-madein-1 {
+  margin-left: 10px;
+}
+.col-madein-2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.col-madein-2 img {
+  width: 21px;
+}
+.col-madein-3 {
+  margin-left: 10px;
+}
+
+.col-madein-3 span {
+  font-size: 10px;
+  font-weight: 700;
+}

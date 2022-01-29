@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="google-signin-client_id" content=""> -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="menu-brand">
+                <img src="/img/brand1.png" alt="">
+            </div>
+            <div class="menu-utama">
+                <a href="" class="tentang">Tentang</a>
+                <a href=""class="produk">Produk</a>
+                <a href=""class="faq">FAQ</a>
+                <a href=""class="event">Events</a>
+                <a href=""class="partner">Partnership</a>
+                <a href=""class="academy">Academy</a>
+            </div>
+            <div class="menu-ld">
+                <div class="pembungkus-btn-masuk">
+                    <button class="btn-masuk">Masuk</button>
+                </div>
+                <div class="pembungkus-btn-daftar">
+                    <button class="btn-daftar">Daftar</button>
+                </div>
+            </div>
+        </nav>
+
+        <%- body %> 
+
+        <footer>
+            <div class="row-footer-menu">
+                <div class="col-footer-1">
+                    <h2>Bagian Dari :</h2>
+                    <div class="row-jkt">
+                        <img src="/img/jkt.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-footer-2">
+                    <img src="/img/startup.svg" alt="">
+                </div>
+                <div class="col-footer-3">
+                    <h2>Produk</h2>
+                    <p>Pertanyaan</p>
+                    <p>Blog</p>
+                    <p>Pengguna</p>
+                    <p>Events</p>
+                    <p>Partnership</p>
+                </div>
+                <div class="col-footer-4">
+                    <h2>Perusahaan</h2>
+                    <p>Abaout</p>
+                    <p>FAQ</p>
+                    <p>Rules</p>
+                    <p>Legal</p>
+                </div>
+                <div class="col-footer-5">
+                    <h2>Hubungi Kami</h2>
+                    <p>Petertanugraha@kotakode.com</p>
+                    <div class="pembungkus-ft-icon">
+                        <img src="/img/linkedlin.svg" alt="">
+                        <img src="/img/ig.svg" alt="">
+                        <img src="/img/twitter.svg" alt="">
+                        <img src="/img/fb.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row-pt">
+                <p>PT Kota Digital Nusantara</p>
+                <p>Copyright 2020 Kotakode. All right reserve</p>
+                <div class="pembungkus-madein-ID">
+                    <div class="col-madein-1">
+                        <p>Made with</p>
+                    </div>
+                    <div class="col-madein-2">
+                        <img src="/img/love.svg" alt=""> 
+                    </div>
+                    <div class="col-madein-3">
+                        <p>in <span>ID</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+   
+    
+
+    <script>
+    function onLoadGoogleCallback(){
+        gapi.load('auth2', function() {
+            auth2 = gapi.auth2.init({
+            client_id: '224457091129-ejnqbdagof0l9o73qp047qopbrri8smq.apps.googleusercontent.com',
+            cookiepolicy: 'single_host_origin',
+            scope: 'profile'
+        });
+
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+                console.log('Signed in: ' + googleUser.getBasicProfile().getName());
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log(id_token);
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/');
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onload = function() {
+                    console.log('Signed in as: ' + xhr.responseText);
+                    if(xhr.responseText == 'success'){
+                        signOut();
+                        location.assign('/home')
+                    }
+                };
+                xhr.send(JSON.stringify({token: id_token}));
+            }, function(error) {
+                console.log('Sign-in error', error);
+            }
+            );
+        });
+
+    element = document.getElementById('googleSignIn');
+    }
+    </script>
+   
+    <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User Keluar.');
+          });
+        }
+    </script>
+
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadGoogleCallback" async defer></script>
+
+</body>
+</html>
